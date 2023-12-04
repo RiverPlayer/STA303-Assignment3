@@ -12,7 +12,9 @@ def get_path(start_station_name: str, end_station_name: str, map: dict[str, Stat
     Args:
         start_station_name(str): The name of the starting station
         end_station_name(str): str The name of the ending station
-        map(dict[str, Station]): Mapping between station names and station objects of the name
+        map(dict[str, Station]): Mapping between station names and station objects of the name,
+                                 Please refer to the relevant comments in the build_data.py
+                                 for the description of the Station class
     Returns:
         List[Station]: A path composed of a series of station_name
     """

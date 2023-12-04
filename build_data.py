@@ -3,7 +3,11 @@ import os
 
 
 class Station:
-
+    """
+    The Station class contains four attributes: id, name, position, and links.
+    Position is a binary combination of longitude and latitude
+    and links are a list of stations adjacent to the Station object
+    """
     def __init__(self, id, name, position):
         self.id = id
         self.name = name
