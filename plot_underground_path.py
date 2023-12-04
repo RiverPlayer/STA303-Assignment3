@@ -1,5 +1,6 @@
 import plotly.graph_objects as go
 import plotly.offline as py
+from build_data import build_data
 
 
 def plot_path(path, output, stations, underground_lines):
@@ -15,7 +16,7 @@ def plot_path(path, output, stations, underground_lines):
     # 检测路径是否存在
 
     for i in range(1, len(path)):
-        if stations[path[i]] not in stations[path[i-1]].links:
+        if stations[path[i]] not in stations[path[i - 1]].links:
             raise Exception("path is not exist")
     mapbox_access_token = (
         'pk.eyJ1IjoibHVrYXNtYXJ0aW5lbGxpIiwiYSI6ImNpem85dmhwazAy'
@@ -86,3 +87,9 @@ def plot_path(path, output, stations, underground_lines):
 
     fig = dict(data=data, layout=layout)
     py.plot(fig, filename=output)  # 生成html文件并打开
+
+
+if __name__ == '__main__':
+    stations, underground_lines = build_data()
+    plot_path(['Acton Town', 'Chiswick Park', 'Turnham Green', 'Stamford Brook'],
+              'visualization_underground/my_path_in_London_railway.html', stations, underground_lines)
