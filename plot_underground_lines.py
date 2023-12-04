@@ -46,7 +46,6 @@ def plot_underground_lines(output, stations, underground_lines):
                 ),
                 name=underground_line['name'],  # 线路名称，显示在图例（legend）上
                 legendgroup=underground_line['name'],
-                showlegend=False
             ),
             go.Scattermapbox(
                 lat=[stations[station_name].position[0] for station_name in underground_line['stations']],  # 路线点经度
