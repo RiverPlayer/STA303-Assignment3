@@ -21,8 +21,8 @@ def get_path(start_station_name: str, end_station_name: str, map: dict[str, Stat
     start_station = map[start_station_name]
     end_station = map[end_station_name]
     # Given a Station object, you can obtain the name and latitude and longitude of that Station by the following code
-    print(f'The longitude of the {start_station.name} is {start_station.position[1]}, and the latitude is {start_station.position[0]}')
-    print(f'The longitude of the {end_station.name} is {end_station.position[1]}, and the latitude is {end_station.position[0]}')
+    print(f'The longitude and latitude of the {start_station.name} is {start_station.position}')
+    print(f'The longitude and latitude of the {end_station.name} is {end_station.position}')
     pass
 
 
