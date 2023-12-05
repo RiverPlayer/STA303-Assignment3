@@ -33,7 +33,6 @@ python find_shortest_path.py  "Acton Town"  "Turnham Green"
 ```
 The above example specifies the path from Acton Town to Turnham Green. 
 
-***(Note: If there are blank space in the station name, station name need to be wrapped in double quotation marks("") in the command line.
-And do not run the above command in markdown. You need to copy it to your own terminal to run it correctly.)***
+***(Note: If there are blank space in the station name, station name need to be wrapped in double quotation marks("") in the command line.)***
 
 Then, open `visualization_underground/my_shortest_path_in_London_railway.html` to view the path.
